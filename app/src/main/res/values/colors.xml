@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ORANGE_LV3">#EB9C57</color>
+    <color name="ORANGE_LV2">#BA7F4B</color>
+    <color name="ORANGE_TEXT">#202128</color>
+    <color name="GREEN_LV3">#76C47F</color>
+    <color name="GREEN_LV2">#87B48C</color>
+    <color name="GREEN_TEXT">#1A201A</color>
+
+    <color name="white_trans_LV1">#33FFFFFF</color>
+    <color name="white_trans_LV2">#66FFFFFF</color>
+    <color name="white_trans_LV3">#99FFFFFF</color>
+    <color name="black_trans_LV1">#33202128</color>
+    <color name="black_trans_LV2">#66202128</color>
+    <color name="black_trans_LV3">#99202128</color>
 </resources>

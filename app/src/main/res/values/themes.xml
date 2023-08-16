@@ -2,7 +2,16 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.KidCineproval" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/ORANGE_LV3</item>
+        <item name="colorPrimaryVariant">@color/ORANGE_LV2</item>
+        <item name="colorOnPrimary">@color/ORANGE_TEXT</item>
+
+        <item name="colorSecondary">@color/GREEN_LV3</item>
+        <item name="colorSecondaryVariant">@color/GREEN_LV2</item>
+        <item name="colorOnSecondary">@color/GREEN_TEXT</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
 
     <style name="Theme.KidCineproval" parent="Base.Theme.KidCineproval" />
