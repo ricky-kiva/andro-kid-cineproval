@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kid Cineproval</string>
+
+    <string name="label_home_list_title">Spot masterpieces, kid.</string>
+    
+    <string name="desc_random_movie">Random movie</string>
 </resources>
