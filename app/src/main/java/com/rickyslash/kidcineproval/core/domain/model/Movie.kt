@@ -9,7 +9,8 @@ data class Movie (
     var title: String,
     var date: String,
     var genre: Int,
-    var backdrop: Int,
+    var backdrop: String,
     var voteAverage: Double,
-    var overview: String
+    var overview: String,
+    var favorite: Boolean = false
 ): Parcelable
