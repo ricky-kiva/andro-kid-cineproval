@@ -43,7 +43,8 @@ android {
 
 dependencies {
 
-    val roomVersion = rootProject.extra["room_version"] as String
+    val roomVer = rootProject.extra["room_version"] as String
+    val glideVer = rootProject.extra["glide_version"] as String
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -53,8 +54,11 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    // UI
+    implementation("com.github.bumptech.glide:glide:$glideVer")
+
     // Room
-    implementation("androidx.room:room-runtime:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
-    androidTestImplementation("androidx.room:room-testing:$roomVersion")
+    implementation("androidx.room:room-runtime:$roomVer")
+    kapt("androidx.room:room-compiler:$roomVer")
+    androidTestImplementation("androidx.room:room-testing:$roomVer")
 }

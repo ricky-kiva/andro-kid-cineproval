@@ -8,6 +8,7 @@ buildscript {
 
     extra.apply {
         set("room_version", "2.5.2")
+        set("glide_version", "4.15.1")
     }
 
     repositories {
