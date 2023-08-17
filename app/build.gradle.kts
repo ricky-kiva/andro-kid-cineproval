@@ -45,6 +45,8 @@ dependencies {
 
     val roomVer = rootProject.extra["room_version"] as String
     val glideVer = rootProject.extra["glide_version"] as String
+    val retrofitVer = rootProject.extra["retrofit_version"] as String
+    val loggingInterceptorVer = rootProject.extra["logging_interceptor_version"] as String
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -61,4 +63,9 @@ dependencies {
     implementation("androidx.room:room-runtime:$roomVer")
     kapt("androidx.room:room-compiler:$roomVer")
     androidTestImplementation("androidx.room:room-testing:$roomVer")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVer")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVer")
+    implementation("com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVer")
 }

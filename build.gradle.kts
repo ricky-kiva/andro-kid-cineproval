@@ -9,6 +9,8 @@ buildscript {
     extra.apply {
         set("room_version", "2.5.2")
         set("glide_version", "4.15.1")
+        set("retrofit_version", "2.9.0")
+        set("logging_interceptor_version", "4.11.0")
     }
 
     repositories {
