@@ -25,7 +25,7 @@ data class MovieEntity (
     var genre: Int,
 
     @ColumnInfo(name="backdrop")
-    var backdrop: Int,
+    var backdrop: String,
 
     @ColumnInfo(name="voteAverage")
     var voteAverage: Double,
@@ -34,5 +34,5 @@ data class MovieEntity (
     var overview: String,
 
     @ColumnInfo(name="isFavorite")
-    var favorite: Boolean
+    var favorite: Boolean = false
 ): Parcelable
