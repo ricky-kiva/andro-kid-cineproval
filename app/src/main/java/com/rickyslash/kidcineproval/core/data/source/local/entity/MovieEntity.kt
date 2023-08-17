@@ -1,4 +1,4 @@
-package com.rickyslash.kidcineproval.core.data.local.entity
+package com.rickyslash.kidcineproval.core.data.source.local.entity
 
 import android.os.Parcelable
 import androidx.annotation.NonNull
@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-@Entity(tableName="movie")
+@Entity(tableName="movieTable")
 data class MovieEntity (
     @PrimaryKey
     @NonNull
@@ -31,5 +31,8 @@ data class MovieEntity (
     var voteAverage: Double,
 
     @ColumnInfo(name="overview")
-    var overview: String
+    var overview: String,
+
+    @ColumnInfo(name="isFavorite")
+    var favorite: Boolean
 ): Parcelable
