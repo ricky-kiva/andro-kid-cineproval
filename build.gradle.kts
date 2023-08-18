@@ -11,6 +11,8 @@ buildscript {
         set("glide_version", "4.15.1")
         set("retrofit_version", "2.9.0")
         set("logging_interceptor_version", "4.11.0")
+        set("koin_version", "3.4.3")
+        set("koin_viewmodel_version", "2.2.3")
     }
 
     repositories {

@@ -47,6 +47,8 @@ dependencies {
     val glideVer = rootProject.extra["glide_version"] as String
     val retrofitVer = rootProject.extra["retrofit_version"] as String
     val loggingInterceptorVer = rootProject.extra["logging_interceptor_version"] as String
+    val koinVer = rootProject.extra["koin_version"] as String
+    val koinViewModelVer = rootProject.extra["koin_viewmodel_version"] as String
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -68,4 +70,9 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofitVer")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVer")
     implementation("com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVer")
+
+    // Koin
+    implementation("io.insert-koin:koin-core:$koinVer")
+    implementation("io.insert-koin:koin-android:$koinVer")
+    implementation("io.insert-koin:koin-androidx-viewmodel:$koinViewModelVer")
 }
