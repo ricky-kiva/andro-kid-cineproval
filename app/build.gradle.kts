@@ -33,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -48,7 +48,8 @@ dependencies {
     val retrofitVer = rootProject.extra["retrofit_version"] as String
     val loggingInterceptorVer = rootProject.extra["logging_interceptor_version"] as String
     val koinVer = rootProject.extra["koin_version"] as String
-    val koinViewModelVer = rootProject.extra["koin_viewmodel_version"] as String
+//    val koinViewModelVer = rootProject.extra["koin_viewmodel_version"] as String
+    val lifecycleVer = rootProject.extra["lifecycle_version"] as String
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -74,5 +75,12 @@ dependencies {
     // Koin
     implementation("io.insert-koin:koin-core:$koinVer")
     implementation("io.insert-koin:koin-android:$koinVer")
-    implementation("io.insert-koin:koin-androidx-viewmodel:$koinViewModelVer")
+    implementation("io.insert-koin:koin-android-viewmodel:$koinVer")
+
+    // Lifecycle
+    api("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVer")
+
+    // Coroutines Flow
+    implementation("androidx.room:room-ktx:$roomVer")
+
 }
