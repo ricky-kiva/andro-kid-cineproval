@@ -33,7 +33,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
                 tvListItemDate.text = dateKebabToSentence(data.date)
 
                 Glide.with(itemView.context)
-                    .load(data.backdrop)
+                    .load("https://image.tmdb.org/t/p/w500${data.backdrop}")
                     .into(object : CustomTarget<Drawable>() {
                         override fun onResourceReady(
                             resource: Drawable, transition:
