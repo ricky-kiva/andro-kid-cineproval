@@ -4,4 +4,6 @@
     <string name="label_home_list_title">Spot masterpieces, kid.</string>
     
     <string name="desc_random_movie">Random movie</string>
+
+    <string name="err_get_movie_data">There\'s an error in getting our data 📡</string>
 </resources>
