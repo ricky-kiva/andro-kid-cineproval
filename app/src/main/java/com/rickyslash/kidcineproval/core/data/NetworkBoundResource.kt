@@ -28,6 +28,8 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
                     emit(Resource.Error(apiResponse.errorMessage))
                 }
             }
+        } else {
+            emitAll(loadFromDB().map { Resource.Success(it) })
         }
     }
 
@@ -38,5 +40,9 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
     protected abstract suspend fun saveCallResult(data: RequestType)
 
     fun asFlow(): Flow<Resource<ResultType>> = result
+
+    companion object {
+        val TAG: String = NetworkBoundResource::class.java.simpleName
+    }
 
 }
