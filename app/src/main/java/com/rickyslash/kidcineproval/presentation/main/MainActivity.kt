@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         movieAdapter.setData(movies.data)
+                        binding.ibMovieRandom.setOnClickListener {
+                            val intent = Intent(this@MainActivity, DetailMovieActivity::class.java)
+                                .putExtra(DetailMovieActivity.EXTRA_DATA, movies.data?.randomOrNull())
+                            startActivity(intent)
+                        }
                     }
                     is Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
@@ -60,6 +65,7 @@ class MainActivity : AppCompatActivity() {
                         binding.tvErrListMovie.text = movies.message ?: getString(R.string.err_get_movie_data)
                     }
                 }
+
             }
         }
 
