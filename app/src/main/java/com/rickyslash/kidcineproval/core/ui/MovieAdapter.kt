@@ -1,6 +1,7 @@
 package com.rickyslash.kidcineproval.core.ui
 
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,9 +50,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
 
         init {
             binding.root.setOnClickListener {
-                binding.root.setOnClickListener {
-                    onItemClick?.invoke(listData[adapterPosition])
-                }
+                onItemClick?.invoke(listData[adapterPosition])
             }
         }
     }
