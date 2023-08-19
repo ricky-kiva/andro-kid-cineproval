@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#FF121212</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="ORANGE_LV3">#EB9C57</color>
-    <color name="ORANGE_LV2">#BA7F4B</color>
-    <color name="ORANGE_TEXT">#202128</color>
-    <color name="GREEN_LV3">#76C47F</color>
-    <color name="GREEN_LV2">#87B48C</color>
-    <color name="GREEN_TEXT">#1A201A</color>
+
+    <color name="BLUE_LV1">#1B44A6</color>
+    <color name="BLUE_LV2">#0B3C95</color>
+    <color name="BLUE_LIGHT">#84D2F3</color>
+
+    <color name="YELLOW">#FDD231</color>
+    <color name="RED_LV1">#C7221A</color>
+    <color name="RED_LV2">#D83E13</color>
 
     <color name="white_trans_LV1">#33FFFFFF</color>
     <color name="white_trans_LV2">#66FFFFFF</color>
     <color name="white_trans_LV3">#99FFFFFF</color>
-    <color name="black_trans_LV1">#33202128</color>
-    <color name="black_trans_LV2">#66202128</color>
-    <color name="black_trans_LV3">#99202128</color>
+    <color name="black_trans_LV1">#33121212</color>
+    <color name="black_trans_LV2">#66121212</color>
+    <color name="black_trans_LV3">#99121212</color>
 </resources>
