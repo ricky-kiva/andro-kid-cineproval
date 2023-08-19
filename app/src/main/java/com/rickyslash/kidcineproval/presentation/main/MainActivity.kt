@@ -65,7 +65,10 @@ class MainActivity : AppCompatActivity() {
                         binding.tvErrListMovie.text = movies.message ?: getString(R.string.err_get_movie_data)
                     }
                 }
-
+            } else {
+                binding.ibMovieRandom.setOnClickListener {
+                    Toast.makeText(this, getString(R.string.err_operation_empty), Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
