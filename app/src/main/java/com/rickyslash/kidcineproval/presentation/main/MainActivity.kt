@@ -22,11 +22,11 @@ import com.rickyslash.kidcineproval.core.ui.MovieAdapter
 import com.rickyslash.kidcineproval.databinding.ActivityMainBinding
 import com.rickyslash.kidcineproval.presentation.detailmovie.DetailMovieActivity
 import com.rickyslash.kidcineproval.presentation.favorite.FavoriteActivity
-import org.koin.android.ext.android.inject
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private val mainViewModel: MainViewModel by inject()
+    private val mainViewModel: MainViewModel by viewModel()
 
     private val binding by lazy(LazyThreadSafetyMode.NONE) {
         ActivityMainBinding.inflate(layoutInflater)
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        setupView()
+        setupActionBar()
 
         val movieAdapter = MovieAdapter()
 
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupView() {
+    private fun setupActionBar() {
         supportActionBar?.apply {
             val colorOnPrimary = with(TypedValue()) {
                 theme.resolveAttribute(com.google.android.material.R.attr.colorOnPrimary, this, true)
@@ -113,9 +113,5 @@ class MainActivity : AppCompatActivity() {
             }
             else -> true
         }
-    }
-
-    companion object {
-        val TAG: String = MainActivity::class.java.simpleName
     }
 }
