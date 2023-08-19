@@ -4,6 +4,9 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.util.TypedValue
 import android.view.MenuItem
 import android.widget.Toast
@@ -58,13 +61,13 @@ class DetailMovieActivity : AppCompatActivity() {
                 detailMovieViewModel.setFavoriteMovie(data, isFavorite)
                 setStatusApproved(isFavorite, data.voteAverage, compBaseColor)
                 if (isFavorite) {
-                    Toast.makeText(this, approvalComment(this, data.voteAverage), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, approvalComment(data.voteAverage), Toast.LENGTH_SHORT).show()
                 }
             }
 
             binding.ibApproved.setOnClickListener {
                 if (isFavorite) {
-                    Toast.makeText(this, approvalComment(this, data.voteAverage), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, approvalComment(data.voteAverage), Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, getString(R.string.label_approve_decide_first), Toast.LENGTH_SHORT).show()
                 }
@@ -93,14 +96,22 @@ class DetailMovieActivity : AppCompatActivity() {
 
     private fun setupActionBar() {
         supportActionBar?.apply {
+            val colorOnPrimary = with(TypedValue()) {
+                theme.resolveAttribute(com.google.android.material.R.attr.colorOnPrimary, this, true)
+                ContextCompat.getColor(this@DetailMovieActivity, resourceId)
+            }
             val colorPrimary = with(TypedValue()) {
                 theme.resolveAttribute(com.google.android.material.R.attr.colorPrimary, this, true)
                 ContextCompat.getColor(this@DetailMovieActivity, resourceId)
             }
 
             elevation = 0f
+            val text = SpannableString(getString(R.string.label_approve_or_not))
+            text.setSpan(ForegroundColorSpan(colorOnPrimary), 0, text.length, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
             setBackgroundDrawable(ColorDrawable(colorPrimary))
-            title = getString(R.string.label_approve_or_not)
+            title = text
+            setHomeAsUpIndicator(R.drawable.round_arrow_back_24)
+            setHomeActionContentDescription(getString(R.string.label_back))
             setDisplayHomeAsUpEnabled(true)
         }
     }

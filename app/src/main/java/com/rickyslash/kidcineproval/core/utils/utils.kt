@@ -39,12 +39,22 @@ fun getGenreNameFromId(genreId: Int): String {
     }
 }
 
-fun approvalComment(context: Context, voteAverage: Double): String {
+fun approvalComment(voteAverage: Double): Int {
     return when {
-        voteAverage >= 8.0 -> context.getString(R.string.label_approved_80_up)
-        voteAverage in 7.0..8.0 -> context.getString(R.string.label_approved_70_80)
-        voteAverage in 6.0..7.0 -> context.getString(R.string.label_approved_60_70)
-        voteAverage < 6.0 -> context.getString(R.string.label_approved_below_60)
-        else -> context.getString(R.string.label_approve_decide_first)
+        voteAverage >= 8.0 -> R.string.label_approved_80_up
+        voteAverage in 7.0..8.0 ->R.string.label_approved_70_80
+        voteAverage in 6.0..7.0 -> R.string.label_approved_60_70
+        voteAverage < 6.0 -> R.string.label_approved_below_60
+        else ->R.string.label_approve_decide_first
+    }
+}
+
+fun cultureScore(averages: Double): Int {
+    return when {
+        averages >= 8.0 -> R.string.label_culture_80_up
+        averages in 7.0..8.0 -> R.string.label_culture_70_80
+        averages in 6.0..7.0 -> R.string.label_culture_60_70
+        averages < 6.0 -> R.string.label_culture_below_60
+        else -> R.string.err_operation_empty
     }
 }

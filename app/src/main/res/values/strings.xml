@@ -12,11 +12,18 @@
     <string name="label_approved_60_70">Not bad, fair enough. We can work with that 🍿</string>
     <string name="label_approved_below_60">I think your cinema detector need to be fixed (kidding) 😋</string>
     <string name="label_evaluate_approved">Evaluate your picks, kid.</string>
+    <string name="label_back">Back</string>
+    <string name="label_culture_80_up">The epitome of culture 🌌</string>
+    <string name="label_culture_70_80">Cultured Connoisseur 🍷</string>
+    <string name="label_culture_60_70">Enthusiastic Novice 🎥</string>
+    <string name="label_culture_below_60">For flap\'n real? (kidding) 🙊</string>
     
     <string name="desc_random_movie">Random movie</string>
     <string name="desc_evaluate_approved">Evaluate approved movie</string>
 
     <string name="err_get_movie_data">There\'s an error in getting our data 📡</string>
+    <string name="err_empty_approved">Approve some masterpieces in your journey 🚤</string>
+    <string name="err_operation_empty">Can\'t do that operation with empty data 🥵</string>
 
     <string name="dev_easter_web" translatable="false">👨‍💻 rickyslash.my.id</string>
 </resources>
