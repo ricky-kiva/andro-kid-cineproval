@@ -2,6 +2,8 @@
     <string name="app_name">Kid Cineproval</string>
 
     <string name="label_home_list_title">Spot masterpieces, kid.</string>
+    <string name="label_detail_btn_approve">Kid Approves</string>
+    <string name="label_approved">Approved by Kid</string>
     
     <string name="desc_random_movie">Random movie</string>
 
