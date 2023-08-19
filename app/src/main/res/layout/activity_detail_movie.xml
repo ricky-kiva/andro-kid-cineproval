@@ -5,10 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
-    android:paddingStart="16dp"
-    android:paddingTop="24dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="16dp"
+    android:padding="16dp"
     tools:context=".presentation.detailmovie.DetailMovieActivity">
 
     <LinearLayout
@@ -52,10 +49,17 @@
         app:strokeWidth="0dp">
 
         <RelativeLayout
+            android:id="@+id/rl_img_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="?attr/colorPrimaryVariant"
-            tools:background="@tools:sample/backgrounds/scenic">
+            android:background="?attr/colorPrimaryVariant">
+
+            <ImageView
+                android:id="@+id/iv_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -74,6 +78,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:text="When a new threat capable of destroying the entire planet emerges, Optimus Prime and the Autobots must team up with a powerful faction known as the Maximals. With the fate of humanity hanging in the balance, humans Noah and Elena will do whatever it takes to help the Transformers as they engage in the ultimate battle to save Earth." />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </RelativeLayout>
 
@@ -110,6 +115,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_approves"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"

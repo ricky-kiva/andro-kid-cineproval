@@ -8,8 +8,10 @@
     <color name="BLUE_LIGHT">#84D2F3</color>
 
     <color name="YELLOW">#FDD231</color>
+    <color name="YELLOW_ALT">#F4971D</color>
     <color name="RED_LV1">#C7221A</color>
     <color name="RED_LV2">#D83E13</color>
+    <color name="GREEN">#FF99CC00</color>
 
     <color name="white_trans_LV1">#33FFFFFF</color>
     <color name="white_trans_LV2">#66FFFFFF</color>

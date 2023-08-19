@@ -1,5 +1,8 @@
 package com.rickyslash.kidcineproval.core.utils
 
+import android.content.Context
+import androidx.core.content.ContextCompat
+import com.rickyslash.kidcineproval.R
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -33,5 +36,15 @@ fun getGenreNameFromId(genreId: Int): String {
         10752 -> "War"
         37 -> "Western"
         else -> "Unknown Genre"
+    }
+}
+
+fun approvalComment(context: Context, voteAverage: Double): String {
+    return when {
+        voteAverage >= 8.0 -> context.getString(R.string.label_approved_80_up)
+        voteAverage in 7.0..8.0 -> context.getString(R.string.label_approved_70_80)
+        voteAverage in 6.0..7.0 -> context.getString(R.string.label_approved_60_70)
+        voteAverage < 6.0 -> context.getString(R.string.label_approved_below_60)
+        else -> context.getString(R.string.label_approve_decide_first)
     }
 }
