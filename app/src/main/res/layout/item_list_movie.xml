@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="180dp"
     android:layout_marginBottom="16dp"
-    app:cardCornerRadius="15dp">
+    app:cardCornerRadius="15dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="0dp">
 
     <RelativeLayout
         android:id="@+id/rl_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:background="@tools:sample/backgrounds/scenic[0]">
+        tools:background="@tools:sample/backgrounds/scenic">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,7 +21,11 @@
             android:background="@drawable/shape_bottom_gradient"
             android:gravity="bottom"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:paddingStart="24dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="18dp"
+            tools:ignore="UselessParent">
 
             <TextView
                 android:id="@+id/tv_list_item_title"
@@ -37,8 +43,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="May 31, 2023"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
     </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>
