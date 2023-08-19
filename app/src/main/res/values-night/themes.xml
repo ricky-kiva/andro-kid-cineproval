@@ -11,5 +11,10 @@
 
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="actionOverflowButtonStyle">@style/OvrOverflowOnPrimary</item>
+    </style>
+
+    <style name="OvrOverflowOnPrimary" parent="@style/Widget.AppCompat.ActionButton.Overflow" >
+        <item name="android:tint">?attr/colorOnPrimary</item>
     </style>
 </resources>

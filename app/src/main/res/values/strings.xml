@@ -4,8 +4,11 @@
     <string name="label_home_list_title">Spot masterpieces, kid.</string>
     <string name="label_detail_btn_approve">Kid Approves</string>
     <string name="label_approved">Approved by Kid</string>
+    <string name="label_approved_or_fav">Approved (Fav)</string>
     
     <string name="desc_random_movie">Random movie</string>
 
     <string name="err_get_movie_data">There\'s an error in getting our data 📡</string>
+
+    <string name="dev_easter_web" translatable="false">👨‍💻 rickyslash.my.id</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.rickyslash.kidcineproval.presentation.main
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +9,11 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.TypedValue
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rickyslash.kidcineproval.R
@@ -16,6 +21,7 @@ import com.rickyslash.kidcineproval.core.data.Resource
 import com.rickyslash.kidcineproval.core.ui.MovieAdapter
 import com.rickyslash.kidcineproval.databinding.ActivityMainBinding
 import com.rickyslash.kidcineproval.presentation.detailmovie.DetailMovieActivity
+import com.rickyslash.kidcineproval.presentation.favorite.FavoriteActivity
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
@@ -82,6 +88,30 @@ class MainActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_comedy_24)
             setHomeActionContentDescription(getString(R.string.app_name))
             setDisplayHomeAsUpEnabled(true)
+        }
+    }
+
+    @SuppressLint("RestrictedApi")
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+        if (menu is MenuBuilder) {
+            menu.setOptionalIconsVisible(true)
+        }
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                Toast.makeText(this@MainActivity, getString(R.string.dev_easter_web), Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.menu_opt_favorite -> {
+                startActivity(Intent(this@MainActivity, FavoriteActivity::class.java))
+                true
+            }
+            else -> true
         }
     }
 

@@ -12,7 +12,18 @@
 
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="actionOverflowButtonStyle">@style/OvrOverflowOnPrimary</item>
+        <item name="actionOverflowMenuStyle">@style/OvrOverflowBackground</item>
     </style>
 
     <style name="Theme.KidCineproval" parent="Base.Theme.KidCineproval" />
+
+    <style name="OvrOverflowOnPrimary" parent="@style/Widget.AppCompat.ActionButton.Overflow" >
+        <item name="android:tint">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="OvrOverflowBackground" parent="@style/Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:popupBackground">?attr/colorPrimary</item>
+        <item name="android:popupElevation">3dp</item>
+    </style>
 </resources>
