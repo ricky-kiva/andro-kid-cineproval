@@ -1,9 +1,15 @@
 package com.rickyslash.kidcineproval.presentation.main
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.util.TypedValue
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rickyslash.kidcineproval.R
 import com.rickyslash.kidcineproval.core.data.Resource
@@ -23,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        setupView()
 
         val movieAdapter = MovieAdapter()
 
@@ -53,7 +61,28 @@ class MainActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(context)
             adapter = movieAdapter
         }
+    }
 
+    private fun setupView() {
+        supportActionBar?.apply {
+            val colorOnPrimary = with(TypedValue()) {
+                theme.resolveAttribute(com.google.android.material.R.attr.colorOnPrimary, this, true)
+                ContextCompat.getColor(this@MainActivity, resourceId)
+            }
+            val colorPrimary = with(TypedValue()) {
+                theme.resolveAttribute(com.google.android.material.R.attr.colorPrimary, this, true)
+                ContextCompat.getColor(this@MainActivity, resourceId)
+            }
+
+            elevation = 0f
+            val text = SpannableString(title)
+            text.setSpan(ForegroundColorSpan(colorOnPrimary), 0, text.length, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+            setBackgroundDrawable(ColorDrawable(colorPrimary))
+            title = text
+            setHomeAsUpIndicator(R.drawable.ic_comedy_24)
+            setHomeActionContentDescription(getString(R.string.app_name))
+            setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     companion object {
