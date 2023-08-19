@@ -43,6 +43,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:elevation="1dp"
+        app:cardBackgroundColor="@android:color/transparent"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,6 +54,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="?attr/colorPrimaryVariant"
             tools:background="@tools:sample/backgrounds/scenic">
 
             <androidx.constraintlayout.widget.ConstraintLayout
