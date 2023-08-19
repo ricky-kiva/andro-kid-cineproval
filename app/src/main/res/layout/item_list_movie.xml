@@ -33,7 +33,6 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="Spider-Man: Across the Spider-Verse" />
@@ -43,7 +42,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="May 31, 2023"
-                android:textColor="@color/white"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
     </RelativeLayout>
