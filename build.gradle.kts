@@ -12,8 +12,8 @@ buildscript {
         set("retrofit_version", "2.9.0")
         set("logging_interceptor_version", "4.11.0")
         set("koin_version", "2.2.3")
-//        set("koin_viewmodel_version", "2.2.3")
         set("lifecycle_version", "2.6.1")
+        set("recyclerview_version", "1.3.1")
     }
 
     repositories {

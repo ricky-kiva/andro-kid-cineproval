@@ -48,8 +48,8 @@ dependencies {
     val retrofitVer = rootProject.extra["retrofit_version"] as String
     val loggingInterceptorVer = rootProject.extra["logging_interceptor_version"] as String
     val koinVer = rootProject.extra["koin_version"] as String
-//    val koinViewModelVer = rootProject.extra["koin_viewmodel_version"] as String
     val lifecycleVer = rootProject.extra["lifecycle_version"] as String
+    val recyclerviewVer = rootProject.extra["recyclerview_version"] as String
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -61,6 +61,7 @@ dependencies {
 
     // UI
     implementation("com.github.bumptech.glide:glide:$glideVer")
+    implementation("androidx.recyclerview:recyclerview:$recyclerviewVer")
 
     // Room
     implementation("androidx.room:room-runtime:$roomVer")
