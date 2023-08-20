@@ -22,9 +22,7 @@ import com.rickyslash.kidcineproval.core.data.Resource
 import com.rickyslash.kidcineproval.core.ui.MovieAdapter
 import com.rickyslash.kidcineproval.databinding.ActivityMainBinding
 import com.rickyslash.kidcineproval.presentation.detailmovie.DetailMovieActivity
-import com.rickyslash.kidcineproval.presentation.favorite.FavoriteActivity
 import org.koin.android.viewmodel.ext.android.viewModel
-import org.koin.core.context.loadKoinModules
 
 class MainActivity : AppCompatActivity() {
 

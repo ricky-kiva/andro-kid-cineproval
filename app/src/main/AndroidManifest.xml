@@ -16,9 +16,6 @@
         android:theme="@style/Theme.KidCineproval"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.favorite.FavoriteActivity"
-            android:exported="false" />
-        <activity
             android:name=".presentation.detailmovie.DetailMovieActivity"
             android:exported="false" />
         <activity
