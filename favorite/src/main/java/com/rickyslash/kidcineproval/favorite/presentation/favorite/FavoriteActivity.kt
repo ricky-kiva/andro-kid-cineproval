@@ -17,7 +17,7 @@ import com.rickyslash.kidcineproval.R
 import com.rickyslash.kidcineproval.core.domain.model.Movie
 import com.rickyslash.kidcineproval.core.ui.MovieAdapter
 import com.rickyslash.kidcineproval.core.utils.cultureScore
-import com.rickyslash.kidcineproval.databinding.ActivityFavoriteBinding
+import com.rickyslash.kidcineproval.favorite.databinding.ActivityFavoriteBinding
 import com.rickyslash.kidcineproval.favorite.di.favoriteModule
 import com.rickyslash.kidcineproval.presentation.detailmovie.DetailMovieActivity
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -37,8 +37,6 @@ class FavoriteActivity : AppCompatActivity() {
         loadKoinModules(favoriteModule)
 
         setupActionBar()
-
-        Toast.makeText(this, "ON FAVORITE DYNAMIC FEATURE", Toast.LENGTH_SHORT).show()
 
         val movieAdapter = MovieAdapter()
 
