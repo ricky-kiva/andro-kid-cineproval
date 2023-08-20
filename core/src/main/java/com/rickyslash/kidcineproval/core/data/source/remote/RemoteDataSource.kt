@@ -1,6 +1,5 @@
 package com.rickyslash.kidcineproval.core.data.source.remote
 
-import android.util.Log
 import com.rickyslash.kidcineproval.core.data.source.remote.network.ApiResponse
 import com.rickyslash.kidcineproval.core.data.source.remote.network.ApiService
 import com.rickyslash.kidcineproval.core.data.source.remote.response.MovieResponse
@@ -23,20 +22,7 @@ class RemoteDataSource(private val apiService: ApiService) {
                 }
             } catch (e: Exception) {
                 emit(ApiResponse.Error(e.toString()))
-                Log.e(TAG, e.toString())
             }
         }.flowOn(Dispatchers.IO)
-    }
-
-    companion object {
-        val TAG: String = RemoteDataSource::class.java.simpleName
-
-        @Volatile
-        private var instance: RemoteDataSource? = null
-
-        fun getInstance(service: ApiService): RemoteDataSource =
-            instance ?: synchronized(this) {
-                instance ?: RemoteDataSource(service)
-            }
     }
 }

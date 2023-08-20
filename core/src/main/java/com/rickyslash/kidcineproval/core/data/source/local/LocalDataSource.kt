@@ -6,15 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 class LocalDataSource constructor(private val movieDao: MovieDao) {
 
-    companion object {
-        private var instance: LocalDataSource? = null
-
-        fun getInstance(movieDao: MovieDao): LocalDataSource =
-            instance ?: synchronized(this) {
-                instance ?: LocalDataSource(movieDao)
-            }
-    }
-
     fun getAllMovie(): Flow<List<MovieEntity>> = movieDao.getAllMovie()
 
     fun getFavoriteMovie(): Flow<List<MovieEntity>> = movieDao.getFavoriteMovies()
