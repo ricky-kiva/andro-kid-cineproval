@@ -3,6 +3,7 @@ package com.rickyslash.kidcineproval.presentation.main
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Spannable
@@ -23,6 +24,7 @@ import com.rickyslash.kidcineproval.databinding.ActivityMainBinding
 import com.rickyslash.kidcineproval.presentation.detailmovie.DetailMovieActivity
 import com.rickyslash.kidcineproval.presentation.favorite.FavoriteActivity
 import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.context.loadKoinModules
 
 class MainActivity : AppCompatActivity() {
 
@@ -117,7 +119,8 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.menu_opt_favorite -> {
-                startActivity(Intent(this@MainActivity, FavoriteActivity::class.java))
+                val uri = Uri.parse("kidcineproval://favorite")
+                startActivity(Intent(Intent.ACTION_VIEW, uri))
                 true
             }
             else -> true

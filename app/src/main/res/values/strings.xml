@@ -9,7 +9,7 @@
     <string name="label_approve_decide_first">Please decide an approval first 🚨</string>
     <string name="label_evaluate_approved">Evaluate your picks, kid.</string>
     <string name="label_back">Back</string>
-    
+
     <string name="desc_random_movie">Random movie</string>
     <string name="desc_evaluate_approved">Evaluate approved movie</string>
 
@@ -18,4 +18,5 @@
     <string name="err_operation_empty">Can\'t do that operation with empty data 🥵</string>
 
     <string name="dev_easter_web" translatable="false">👨‍💻 rickyslash.my.id</string>
+    <string name="title_favorite">Favorite</string>
 </resources>
