@@ -4,6 +4,7 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
 }
+apply(from = "../shared_dependencies.gradle")
 
 android {
     namespace = "com.rickyslash.kidcineproval"
@@ -42,46 +43,8 @@ android {
 }
 
 dependencies {
-
-    val roomVer = rootProject.extra["room_version"] as String
-    val glideVer = rootProject.extra["glide_version"] as String
-    val retrofitVer = rootProject.extra["retrofit_version"] as String
-    val loggingInterceptorVer = rootProject.extra["logging_interceptor_version"] as String
-    val koinVer = rootProject.extra["koin_version"] as String
-    val lifecycleVer = rootProject.extra["lifecycle_version"] as String
-    val recyclerviewVer = rootProject.extra["recyclerview_version"] as String
-
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    // UI
-    implementation("com.github.bumptech.glide:glide:$glideVer")
-    implementation("androidx.recyclerview:recyclerview:$recyclerviewVer")
-
-    // Room
-    implementation("androidx.room:room-runtime:$roomVer")
-    kapt("androidx.room:room-compiler:$roomVer")
-    androidTestImplementation("androidx.room:room-testing:$roomVer")
-
-    // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:$retrofitVer")
-    implementation("com.squareup.retrofit2:converter-gson:$retrofitVer")
-    implementation("com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVer")
-
-    // Koin
-    implementation("io.insert-koin:koin-core:$koinVer")
-    implementation("io.insert-koin:koin-android:$koinVer")
-    implementation("io.insert-koin:koin-android-viewmodel:$koinVer")
-
-    // Lifecycle
-    api("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVer")
-
-    // Coroutines Flow
-    implementation("androidx.room:room-ktx:$roomVer")
-
+    val kotlinVer = rootProject.extra["kotlin_version"]
+    implementation(project(":core"))
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVer")
 }

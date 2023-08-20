@@ -7,16 +7,8 @@
     <string name="label_approved_or_fav">Approved (Fav)</string>
     <string name="label_approve_or_not">Approve or Not?</string>
     <string name="label_approve_decide_first">Please decide an approval first 🚨</string>
-    <string name="label_approved_80_up">You truly has a taste. A person of culture 🌊</string>
-    <string name="label_approved_70_80">Guess Mr/s. Popflix is well experienced 👓</string>
-    <string name="label_approved_60_70">Not bad, fair enough. We can work with that 🍿</string>
-    <string name="label_approved_below_60">I think your cinema detector need to be fixed (kidding) 😋</string>
     <string name="label_evaluate_approved">Evaluate your picks, kid.</string>
     <string name="label_back">Back</string>
-    <string name="label_culture_80_up">The epitome of culture 🌌</string>
-    <string name="label_culture_70_80">Cultured Connoisseur 🍷</string>
-    <string name="label_culture_60_70">Enthusiastic Novice 🎥</string>
-    <string name="label_culture_below_60">For flap\'n real? (kidding) 🙊</string>
     
     <string name="desc_random_movie">Random movie</string>
     <string name="desc_evaluate_approved">Evaluate approved movie</string>

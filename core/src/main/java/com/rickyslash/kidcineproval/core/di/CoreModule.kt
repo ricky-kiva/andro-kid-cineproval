@@ -39,7 +39,7 @@ val networkModule = module {
             .addInterceptor { chain ->
                 val req = chain.request()
                 val reqHeaders = req.newBuilder()
-                    .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwN2IxY2U1ZjQ1NmI0ODRmYWYyY2VkZjc2YTYyNTdiNiIsInN1YiI6IjY0ZGIwZDM1NzcxOWQ3MDEyMjYwYTIyYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Y7ox5FRn6KieG_aZt4rmPWdUvsKj83OEhBIRO5UbpqU")
+                    .header("Authorization", "Bearer {please put your own token}")
                     .build()
                 chain.proceed(reqHeaders)
             }

@@ -1,7 +1,6 @@
 package com.rickyslash.kidcineproval.core.ui
 
 import android.graphics.drawable.Drawable
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.rickyslash.kidcineproval.R
-import com.rickyslash.kidcineproval.databinding.ItemListMovieBinding
+import com.rickyslash.kidcineproval.core.R
+import com.rickyslash.kidcineproval.core.databinding.ItemListMovieBinding
 import com.rickyslash.kidcineproval.core.domain.model.Movie
 import com.rickyslash.kidcineproval.core.utils.dateKebabToSentence
 

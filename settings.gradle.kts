@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Kid Cineproval"
 include(":app")
+include(":core")

@@ -2,11 +2,13 @@
 plugins {
     id("com.android.application") version "8.1.0" apply false
     id("org.jetbrains.kotlin.android") version "1.8.0" apply false
+    id("com.android.library") version "8.1.0" apply false
 }
 
 buildscript {
 
     extra.apply {
+        set("kotlin_version", "1.8.0")
         set("room_version", "2.5.2")
         set("glide_version", "4.15.1")
         set("retrofit_version", "2.9.0")
@@ -14,6 +16,7 @@ buildscript {
         set("koin_version", "2.2.3")
         set("lifecycle_version", "2.6.1")
         set("recyclerview_version", "1.3.1")
+        set("cardview_version", "1.0.0")
     }
 
     repositories {
