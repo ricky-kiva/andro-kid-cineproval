@@ -18,6 +18,7 @@ buildscript {
         set("lifecycle_version", "2.6.1")
         set("recyclerview_version", "1.3.1")
         set("cardview_version", "1.0.0")
+        set("kotlin_coroutines_version", "1.7.3")
     }
 
     repositories {

@@ -48,6 +48,7 @@ dependencies {
     val retrofitVer = rootProject.extra["retrofit_version"] as String
     val loggingInterceptorVer = rootProject.extra["logging_interceptor_version"] as String
     val lifecycleVer = rootProject.extra["lifecycle_version"] as String
+    val coroutinesFlowVer = rootProject.extra["kotlin_coroutines_version"] as String
 
     // Room
     implementation("androidx.room:room-runtime:$roomVer")
@@ -60,6 +61,8 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVer")
 
     // Coroutines Flow
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesFlowVer")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesFlowVer")
     implementation("androidx.room:room-ktx:$roomVer")
 
     // Lifecycle
