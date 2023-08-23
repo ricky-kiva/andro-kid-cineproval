@@ -12,6 +12,7 @@
 
     <string name="desc_random_movie">Random movie</string>
     <string name="desc_evaluate_approved">Evaluate approved movie</string>
+    <string name="desc_movie_poster">Movie poster</string>
 
     <string name="err_get_movie_data">There\'s an error in getting our data 📡</string>
     <string name="err_empty_approved">Approve some masterpieces in your journey 🚤</string>
