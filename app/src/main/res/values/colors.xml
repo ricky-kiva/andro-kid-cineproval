@@ -14,9 +14,5 @@
     <color name="GREEN">#FF99CC00</color>
 
     <color name="white_trans_LV1">#33FFFFFF</color>
-    <color name="white_trans_LV2">#66FFFFFF</color>
-    <color name="white_trans_LV3">#99FFFFFF</color>
-    <color name="black_trans_LV1">#33121212</color>
-    <color name="black_trans_LV2">#66121212</color>
     <color name="black_trans_LV3">#99121212</color>
 </resources>
