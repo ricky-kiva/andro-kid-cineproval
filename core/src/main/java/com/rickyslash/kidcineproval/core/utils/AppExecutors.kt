@@ -26,7 +26,9 @@ class AppExecutors @VisibleForTesting constructor(
     }
 
     fun diskIO(): Executor = diskIO
+    @Suppress("unused")
     fun networkIO(): Executor = networkIO
+    @Suppress("unused")
     fun mainThread(): Executor = mainThread
 
     companion object {

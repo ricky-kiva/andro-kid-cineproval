@@ -33,6 +33,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
         }
     }
 
+    @Suppress("EmptyMethod")
     protected open fun onFetchFailed() {}
     protected abstract fun loadFromDB(): Flow<ResultType>
     protected abstract fun shouldFetch(data: ResultType?): Boolean
@@ -40,9 +41,4 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
     protected abstract suspend fun saveCallResult(data: RequestType)
 
     fun asFlow(): Flow<Resource<ResultType>> = result
-
-    companion object {
-        val TAG: String = NetworkBoundResource::class.java.simpleName
-    }
-
 }
