@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                     is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
-                        movieAdapter.setData(movies.data)
+                        movieAdapter.submitList(movies.data)
                         binding.ibMovieRandom.setOnClickListener {
                             val intent = Intent(this@MainActivity, DetailMovieActivity::class.java)
                                 .putExtra(DetailMovieActivity.EXTRA_DATA, movies.data?.randomOrNull())

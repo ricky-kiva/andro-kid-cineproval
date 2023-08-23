@@ -47,7 +47,7 @@ class FavoriteActivity : AppCompatActivity() {
         }
 
         favoriteViewModel.favoriteMovie.observe(this) { movies ->
-            movieAdapter.setData(movies)
+            movieAdapter.submitList(movies)
             binding.tvEmptyApproved.visibility = if (movies.isNotEmpty()) View.GONE else View.VISIBLE
             binding.ibEvalApproved.setOnClickListener { analyzeVoteAverage(movies) }
         }
