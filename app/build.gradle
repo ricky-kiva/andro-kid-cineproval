@@ -47,4 +47,7 @@ dependencies {
     implementation project(':core')
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // LeakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
 }
