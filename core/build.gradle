@@ -40,7 +40,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
-    //noinspection GradleDependency
+    //noinspection GradleDependency,DifferentStdlibGradleVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Room

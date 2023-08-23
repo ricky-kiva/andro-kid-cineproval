@@ -43,6 +43,6 @@ dependencies {
 
     implementation project(':core')
     implementation project(':app')
-    //noinspection GradleDependency
+    //noinspection GradleDependency,DifferentStdlibGradleVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
