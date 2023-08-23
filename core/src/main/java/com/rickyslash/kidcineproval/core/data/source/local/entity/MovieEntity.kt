@@ -1,7 +1,6 @@
 package com.rickyslash.kidcineproval.core.data.source.local.entity
 
 import android.os.Parcelable
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,7 +10,6 @@ import kotlinx.parcelize.Parcelize
 @Entity(tableName="movieTable")
 data class MovieEntity (
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name="id")
     var id: Int,
 
