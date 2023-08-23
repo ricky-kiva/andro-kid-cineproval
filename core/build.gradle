@@ -8,7 +8,7 @@ apply from: '../shared_dependencies.gradle'
 
 android {
     namespace 'com.rickyslash.kidcineproval.core'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 21
@@ -40,10 +40,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Room
     implementation "androidx.room:room-runtime:$room_version"
+    //noinspection KaptUsageInsteadOfKsp
     kapt "androidx.room:room-compiler:$room_version"
     androidTestImplementation "androidx.room:room-testing:$room_version"
 

@@ -8,7 +8,7 @@ apply from: '../shared_dependencies.gradle'
 
 android {
     namespace 'com.rickyslash.kidcineproval.favorite'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 21
@@ -43,5 +43,6 @@ dependencies {
 
     implementation project(':core')
     implementation project(':app')
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

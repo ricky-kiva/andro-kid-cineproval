@@ -8,7 +8,7 @@ apply from: '../shared_dependencies.gradle'
 
 android {
     namespace 'com.rickyslash.kidcineproval'
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         applicationId 'com.rickyslash.kidcineproval'
@@ -46,6 +46,7 @@ android {
 dependencies {
     implementation project(':core')
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // LeakCanary
