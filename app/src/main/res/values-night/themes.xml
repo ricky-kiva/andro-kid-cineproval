@@ -6,7 +6,7 @@
         <item name="colorOnPrimary">@color/YELLOW</item>
 
         <item name="colorSecondary">@color/BLUE_LV1</item>
-        <item name="colorSecondaryVariant">@color/BLUE_LV2</item>
+        <item name="colorSecondaryVariant">@color/black_trans_LV3</item>
         <item name="colorOnSecondary">@color/white</item>
 
         <item name="android:statusBarColor">?attr/colorPrimary</item>
