@@ -11,9 +11,14 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "androidx.cardview:cardview:$cardview_version"
+    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
 
     // Koin
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
     implementation "io.insert-koin:koin-android-viewmodel:$koin_version"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "org.mockito:mockito-inline:$mockito_version"
 }

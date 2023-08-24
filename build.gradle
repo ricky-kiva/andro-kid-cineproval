@@ -25,4 +25,6 @@ ext {
     kotlin_coroutines_version = '1.7.3'
     sqlite_version = '2.3.1'
     sqlcipher_version = '4.4.0'
+    mockito_version = '4.4.0'
+    shimmer_version = "0.5.0"
 }
